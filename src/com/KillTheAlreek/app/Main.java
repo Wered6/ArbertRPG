@@ -9,7 +9,8 @@ public class Main
         Warrior warrior1 = new Warrior("Arbert", "Morgana");
         warrior1.PrintEverything();
 
-        Wizard wizard1 = new Wizard("Ezreal", "Noxus");
-        wizard1.PrintEverything();
+        warrior1.addExperience(50);
+
+        warrior1.PrintEverything();
     }
 }

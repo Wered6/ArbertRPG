@@ -11,17 +11,21 @@ abstract public class Character
 
         HP = new HealthPoints((short) 100);
         power = 0;
-        level = 1;
-        experience = 0;
-        experienceToNextLevel = 200;
+        currentLevel = new Level();
         fullName = name + " of " + city;
+    }
+
+    public void addExperience(int amountOfExperience)
+    {
+        currentLevel.addExperience(amountOfExperience);
     }
 
     public void PrintEverything()
     {
+        System.out.println();
         System.out.println("Nazwa:\t\t\t|" + fullName);
-        System.out.println("Level:\t\t\t|" + level);
-        System.out.println("Doświadczenie:\t|" + experience + "/" + experienceToNextLevel);
+        System.out.println("Level:\t\t\t|" + currentLevel.getCurrentLevel());
+        System.out.println("Doświadczenie:\t|" + currentLevel.getCurrentExperience() + "/" + currentLevel.getNextLevelExperience());
         System.out.println("HP:\t\t\t\t|" + HP.getCurrentHP() + "/" + HP.getMaxHP());
         System.out.println("Moc:\t\t\t|" + power);
     }
@@ -30,9 +34,7 @@ abstract public class Character
 
     private byte power;
 
-    private byte level;
-    private int experience;
-    private int experienceToNextLevel;
+    private Level currentLevel;
 
     private String name;
     private String city;
