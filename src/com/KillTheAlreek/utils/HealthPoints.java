@@ -21,7 +21,7 @@ public class HealthPoints
         }
     }
 
-    public void subHP(short amountOfHP)
+    public void subtractHP(short amountOfHP)
     {
         if (currentHP - amountOfHP < 0)
         {
@@ -43,11 +43,11 @@ public class HealthPoints
         return maxHP;
     }
 
-    public void setMaxHP(short maxHP)
+    public void levelUpHP(short levelUpHP)
     {
-        this.maxHP = maxHP;
+        maxHP += levelUpHP;
 
-        currentHP = maxHP;
+        currentHP += levelUpHP;
     }
 
     private short currentHP;
