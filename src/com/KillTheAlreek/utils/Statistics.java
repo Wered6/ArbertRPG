@@ -11,7 +11,8 @@ public class Statistics
     public Statistics()
     {
         level = new Level();
-        itemPower = new Power((byte) 0);
+        basePower = new Power();
+        itemPower = new Power();
         finalPower = basePower.addPower(itemPower);
         updateFromJson();
     }
@@ -21,7 +22,7 @@ public class Statistics
         try
         {
             String currentDirectory = System.getProperty("user.dir");
-            String relativePath = "src\\com\\KillTheAlreek\\utils\\levels.json";
+            String relativePath = "src\\com\\KillTheAlreek\\utils\\playerData.json";
             String jsonFilePath = currentDirectory + "\\" + relativePath;
 
             FileReader fileReader = new FileReader(jsonFilePath);
@@ -40,8 +41,8 @@ public class Statistics
                 if (level == this.level.getCurrentLevel())
                 {
                     this.basePower.setPower((byte) power);
-                    this.baseHealthPoints.setMaxValue((short) healthPoints);
-                    this.baseMana.setMaxValue((short) mana);
+                    this.healthPoints.setMax((short) healthPoints);
+                    this.mana.setMax((short) mana);
                 }
             }
         }
@@ -51,11 +52,21 @@ public class Statistics
         }
     }
 
+    public void print()
+    {
+        System.out.println();
+        System.out.println("Statystyki:");
+        System.out.println("Level: " + level);
+        System.out.println("Health Points: " + healthPoints);
+        System.out.println("Mana: " + mana);
+        System.out.println("Power (base + item): " + finalPower + "(" + basePower + " + " + itemPower + ")");
+    }
+
     private Level level;
 
-    private HealthPoints baseHealthPoints;
+    private HealthPoints healthPoints;
 
-    private Mana baseMana;
+    private Mana mana;
 
     private Power basePower;
     private Power itemPower;

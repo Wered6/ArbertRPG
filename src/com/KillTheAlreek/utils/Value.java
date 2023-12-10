@@ -9,7 +9,7 @@ abstract public class Value
         currentValue = maxValue;
     }
 
-    public void increaseCurrentValue(short amountOfValue)
+    public void increaseCurrent(short amountOfValue)
     {
         if (currentValue + amountOfValue > maxValue)
         {
@@ -20,7 +20,7 @@ abstract public class Value
         }
     }
 
-    public void decreaseCurrentValue(short amountOfValue)
+    public void decreaseCurrent(short amountOfValue)
     {
         if (currentValue - amountOfValue < 0)
         {
@@ -31,17 +31,17 @@ abstract public class Value
         }
     }
 
-    public short getCurrentValue()
+    public short getCurrent()
     {
         return currentValue;
     }
 
-    public short getMaxValue()
+    public short getMax()
     {
         return maxValue;
     }
 
-    public void setMaxValue(short newMaxValue)
+    public void setMax(short newMaxValue)
     {
         short differenceValue = (short) (newMaxValue - maxValue);
 
