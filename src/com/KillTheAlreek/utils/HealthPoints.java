@@ -1,55 +1,9 @@
 package com.KillTheAlreek.utils;
 
-public class HealthPoints
+public class HealthPoints extends Value
 {
-    public HealthPoints(short maxHP)
+    public HealthPoints(short maxHealthPoints)
     {
-        this.maxHP = maxHP;
-
-        currentHP = maxHP;
+        super(maxHealthPoints);
     }
-
-    public void addHP(short amountOfHP)
-    {
-        if (currentHP + amountOfHP > maxHP)
-        {
-            currentHP = maxHP;
-        }
-        else
-        {
-            currentHP += amountOfHP;
-        }
-    }
-
-    public void subtractHP(short amountOfHP)
-    {
-        if (currentHP - amountOfHP < 0)
-        {
-            currentHP = 0;
-        }
-        else
-        {
-            currentHP -= amountOfHP;
-        }
-    }
-
-    public short getCurrentHP()
-    {
-        return currentHP;
-    }
-
-    public short getMaxHP()
-    {
-        return maxHP;
-    }
-
-    public void levelUpHP(short levelUpHP)
-    {
-        maxHP += levelUpHP;
-
-        currentHP += levelUpHP;
-    }
-
-    private short currentHP;
-    private short maxHP;
 }

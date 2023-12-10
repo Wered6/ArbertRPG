@@ -12,7 +12,7 @@ public class Level
     {
         currentLevel = 1;
         currentExperience = 0;
-        increaseNextLevelExperience();
+        setNextLevelExperience();
     }
 
     public void addExperience(int amountOfExperience)
@@ -22,31 +22,31 @@ public class Level
         while (currentExperience >= nextLevelExperience)
         {
             levelUp();
-            increaseNextLevelExperience();
+            setNextLevelExperience();
         }
     }
 
-    private void increaseNextLevelExperience()
+    private void setNextLevelExperience()
     {
         try
         {
             String currentDirectory = System.getProperty("user.dir");
-            String relativePath = "src\\com\\KillTheAlreek\\utils\\levels.json";
+            String relativePath = "src\\com\\KillTheAlreek\\utils\\playerData.json";
             String jsonFilePath = currentDirectory + "\\" + relativePath;
             FileReader fileReader = new FileReader(jsonFilePath);
             JSONTokener jsonTokener = new JSONTokener(fileReader);
             JSONObject jsonObject = new JSONObject(jsonTokener);
-            JSONArray levelsArray = jsonObject.getJSONArray("levels");
+            JSONArray levelsArray = jsonObject.getJSONArray("statistics");
 
             for (int i = 0; i < levelsArray.length(); i++)
             {
                 JSONObject levelData = levelsArray.getJSONObject(i);
                 int level = levelData.getInt("level");
-                int experienceRequired = levelData.getInt("experienceRequired");
+                int nextLevelExperience = levelData.getInt("nextLevelExperience");
 
                 if (level == currentLevel)
                 {
-                    nextLevelExperience = experienceRequired;
+                    this.nextLevelExperience = nextLevelExperience;
                     break;
                 }
             }

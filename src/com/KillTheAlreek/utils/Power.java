@@ -2,17 +2,25 @@ package com.KillTheAlreek.utils;
 
 public class Power
 {
-    public Power()
+    public Power(byte power)
     {
-        getFromJson();
+        this.power = power;
     }
 
-    private void getFromJson()
+    public Power addPower(Power otherPower)
     {
-
+        return new Power((byte)(this.power + otherPower.power));
     }
 
-    private byte basePower;
-    private byte itemPower;
+    public byte getPower()
+    {
+        return power;
+    }
+
+    public void setPower(byte power)
+    {
+        this.power = power;
+    }
+
     private byte power;
 }

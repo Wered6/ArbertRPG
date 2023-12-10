@@ -1,16 +1,16 @@
 package com.KillTheAlreek.app;
 
 import com.KillTheAlreek.characters.*;
+import com.KillTheAlreek.utils.GameLogic;
 
 public class Main
 {
     public static void main(String[] args)
     {
-        Warrior warrior1 = new Warrior("Arbert", "Morgana");
-        warrior1.PrintEverything();
-
-        warrior1.addExperience(50);
-
-        warrior1.PrintEverything();
+        GameLogic.printHeading("Testing helper methods!");
+        GameLogic.anythingToContinue();
+        GameLogic.clearConsole();
+        int input = GameLogic.readInt("Enter 1, 2 or 3: ", 3);
+        System.out.println("You chose number " + input);
     }
 }

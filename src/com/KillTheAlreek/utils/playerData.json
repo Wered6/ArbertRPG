@@ -1,0 +1,39 @@
+{
+    "statistics": [
+        {
+            "level": 1,
+            "nextLevelExperience": 100,
+            "power": 1,
+            "healthPoints": 100,
+            "mana": 50
+        },
+        {
+            "level": 2,
+            "nextLevelExperience": 200,
+            "power": 3,
+            "healthPoints": 200,
+            "mana": 100
+        },
+        {
+            "level": 3,
+            "nextLevelExperience": 300,
+            "power": 5,
+            "healthPoints": 300,
+            "mana": 150
+        },
+        {
+            "level": 4,
+            "nextLevelExperience": 400,
+            "power": 7,
+            "healthPoints": 400,
+            "mana": 200
+        },
+        {
+            "level": 5,
+            "nextLevelExperience": 500,
+            "power": 9,
+            "healthPoints": 500,
+            "mana": 250
+        }
+    ]
+}
