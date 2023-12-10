@@ -2,17 +2,14 @@ package com.KillTheAlreek.utils;
 
 public class Power
 {
-    public Power()
+    public Power(byte power)
     {
-        this.power = 0;
+        this.power = power;
     }
 
-    public Power addPower(Power otherPower)
+    public void sumOfPowers(Power power1, Power power2)
     {
-        Power power1 = new Power();
-        power1.setPower((byte) (power1.getPower() + otherPower.getPower()));
-
-        return power1;
+        this.power = (byte) (power1.getPower()+power2.getPower());
     }
 
     public byte getPower()

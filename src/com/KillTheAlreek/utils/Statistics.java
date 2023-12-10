@@ -11,10 +11,10 @@ public class Statistics
     public Statistics()
     {
         level = new Level();
-        basePower = new Power();
-        itemPower = new Power();
-        finalPower = basePower.addPower(itemPower);
+        itemPower = new Power((byte) 0);
+        finalPower = new Power((byte) 0);
         updateFromJson();
+        finalPower.sumOfPowers(basePower, itemPower);
     }
 
     public void updateFromJson()
@@ -40,9 +40,10 @@ public class Statistics
 
                 if (level == this.level.getCurrentLevel())
                 {
-                    this.basePower.setPower((byte) power);
-                    this.healthPoints.setMax((short) healthPoints);
-                    this.mana.setMax((short) mana);
+
+                    this.healthPoints = new HealthPoints((short) healthPoints);
+                    this.basePower = new Power((byte) power);
+                    this.mana = new Mana((short) mana);
                 }
             }
         }
@@ -56,16 +57,15 @@ public class Statistics
     {
         System.out.println();
         System.out.println("Statystyki:");
-        System.out.println("Level: " + level);
-        System.out.println("Health Points: " + healthPoints);
-        System.out.println("Mana: " + mana);
-        System.out.println("Power (base + item): " + finalPower + "(" + basePower + " + " + itemPower + ")");
+        System.out.println("Level: " + level.getCurrentLevel());
+        System.out.println("Health Points: " + healthPoints.getCurrent());
+        System.out.println("Mana: " + mana.getCurrent());
+        System.out.println("Power (base + item): " + finalPower.getPower() + "(" + basePower.getPower() + " + " + itemPower.getPower() + ")");
     }
 
     private Level level;
 
     private HealthPoints healthPoints;
-
     private Mana mana;
 
     private Power basePower;
