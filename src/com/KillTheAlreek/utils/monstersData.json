@@ -1,0 +1,39 @@
+{
+  "monsters": [
+    {
+      "id": 1,
+      "name": "czterodaktyl",
+      "expGet": 100,
+      "power": 1,
+      "healthPoints": 100
+    },
+    {
+      "id": 2,
+      "name": "",
+      "expGet": 200,
+      "power": 2,
+      "healthPoints": 200
+    },
+    {
+      "id": 3,
+      "name": "",
+      "expGet": 300,
+      "power": 3,
+      "healthPoints": 300
+    },
+    {
+      "id": 4,
+      "name": "",
+      "expGet": 400,
+      "power": 4,
+      "healthPoints": 400
+    },
+    {
+      "id": 5,
+      "name": "",
+      "expGet": 500,
+      "power": 5,
+      "healthPoints": 500
+    }
+  ]
+}

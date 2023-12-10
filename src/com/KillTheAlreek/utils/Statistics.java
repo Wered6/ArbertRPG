@@ -58,8 +58,8 @@ public class Statistics
         System.out.println();
         System.out.println("Statystyki:");
         System.out.println("Level: " + level.getCurrentLevel());
-        System.out.println("Health Points: " + healthPoints.getCurrent());
-        System.out.println("Mana: " + mana.getCurrent());
+        System.out.println("Health Points: " + healthPoints.getCurrent() + "/" + healthPoints.getMax());
+        System.out.println("Mana: " + mana.getCurrent() + "/" + mana.getMax());
         System.out.println("Power (base + item): " + finalPower.getPower() + "(" + basePower.getPower() + " + " + itemPower.getPower() + ")");
     }
 
