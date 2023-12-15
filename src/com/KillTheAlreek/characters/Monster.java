@@ -2,20 +2,17 @@ package com.KillTheAlreek.characters;
 
 import com.KillTheAlreek.utils.MonsterStatistics;
 
-public class Opponent
+public class Monster
 {
-
-    public Opponent(int id)
+    public Monster(int id)
     {
         monsterStatistics = new MonsterStatistics(id);
     }
 
-    MonsterStatistics monsterStatistics;
-
     public void info()
     {
-        monsterStatistics.print();
+        monsterStatistics.printInfo();
     }
 
-
+    MonsterStatistics monsterStatistics;
 }

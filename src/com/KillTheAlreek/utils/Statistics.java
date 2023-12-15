@@ -53,14 +53,14 @@ public class Statistics
         }
     }
 
-    public void print()
+    public void printInfo()
     {
-        System.out.println();
-        System.out.println("Statystyki:");
-        System.out.println("Level: " + level.getCurrentLevel());
-        System.out.println("Health Points: " + healthPoints.getCurrent() + "/" + healthPoints.getMax());
-        System.out.println("Mana: " + mana.getCurrent() + "/" + mana.getMax());
-        System.out.println("Power (base + item): " + finalPower.getPower() + "(" + basePower.getPower() + " + " + itemPower.getPower() + ")");
+        GameLogic.printStringLBL("");
+        GameLogic.printStringLBL("Statystyki:");
+        GameLogic.printStringLBL("Level: " + level.getCurrentLevel());
+        GameLogic.printStringLBL("Health Points: " + healthPoints.getCurrent() + "/" + healthPoints.getMax());
+        GameLogic.printStringLBL("Mana: " + mana.getCurrent() + "/" + mana.getMax());
+        GameLogic.printStringLBL("Power (base+item): " + finalPower.getPower() + " (" + basePower.getPower() + "+" + itemPower.getPower() + ")");
     }
 
     private Level level;

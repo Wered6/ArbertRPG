@@ -19,7 +19,7 @@ abstract public class GameLogic
             catch (Exception e)
             {
                 input = -1;
-                System.out.println("Wprowadź liczbę całkowitą (integer)!");
+                printStringLBL("Wprowadź liczbę całkowitą (integer)!");
             }
         }
         while (input < 1 || input > userChoices);
@@ -41,7 +41,7 @@ abstract public class GameLogic
     {
         for (int i = 0; i < n; i++)
         {
-            System.out.print("-");
+            printStringLBL("-");
         }
         System.out.println();
     }
@@ -50,15 +50,49 @@ abstract public class GameLogic
     public static void printHeading(String title)
     {
         printSeperator(30);
-        System.out.println(title);
+        printStringLBL(title);
         printSeperator(30);
     }
 
     // method to stop the game until user enters anything
     public static void anythingToContinue()
     {
-        System.out.println("\nWprowadź cokolwiek by kontynuuować...");
+        printStringLBL("\nWprowadź cokolwiek by kontynuuować...");
         scanner.next();
+    }
+
+    public static void printStringLBL(String str, long time)
+    {
+        for (int i = 0; i < str.length(); i++)
+        {
+            System.out.print(str.charAt(i));
+            try
+            {
+                Thread.sleep(time);
+            }
+            catch (InterruptedException e)
+            {
+                e.printStackTrace();
+            }
+        }
+        System.out.println();
+    }
+
+    public static void printStringLBL(String str)
+    {
+        for (int i = 0; i < str.length(); i++)
+        {
+            System.out.print(str.charAt(i));
+            try
+            {
+                Thread.sleep(35);
+            }
+            catch (InterruptedException e)
+            {
+                e.printStackTrace();
+            }
+        }
+        System.out.println();
     }
 
     static Scanner scanner = new Scanner(System.in);

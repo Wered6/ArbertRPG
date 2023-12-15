@@ -34,12 +34,14 @@ public class MonsterStatistics
                 String name = monstersData.getString("name");
                 int power = monstersData.getInt("power");
                 int healthPoints = monstersData.getInt("healthPoints");
+                String description = monstersData.getString("description");
 
                 if (id == this.id)
                 {
                     this.name = name;
                     this.healthPoints = new HealthPoints((short) healthPoints);
                     this.basePower = new Power((byte) power);
+                    this.description = description;
                 }
             }
         }
@@ -49,18 +51,20 @@ public class MonsterStatistics
         }
     }
 
-    public void print()
+    public void printInfo()
     {
-        System.out.println();
-        System.out.println("Statystyki potwora:");
-        System.out.println("Nazwa potwora: " + name);
-        System.out.println("Health Points: " + healthPoints.getCurrent() + "/" + healthPoints.getMax());
-        System.out.println("Power: " + basePower.getPower());
+        GameLogic.printStringLBL("");
+        GameLogic.printStringLBL(description, 1);
+        GameLogic.printStringLBL("");
+        GameLogic.printStringLBL("Statystyki potwora:");
+        GameLogic.printStringLBL("Nazwa potwora: " + name);
+        GameLogic.printStringLBL("Health Points: " + healthPoints.getCurrent() + "/" + healthPoints.getMax());
+        GameLogic.printStringLBL("Power: " + basePower.getPower());
     }
-
 
     private int id;
     private String name;
     private HealthPoints healthPoints;
     private Power basePower;
+    private String description;
 }

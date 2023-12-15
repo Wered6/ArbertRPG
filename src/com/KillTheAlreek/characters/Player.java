@@ -9,11 +9,9 @@ public class Player
         statistics = new Statistics();
     }
 
-    Statistics statistics;
-
     public void info()
     {
-        statistics.print();
+        statistics.printInfo();
     }
 
     void showFullName()
@@ -48,4 +46,6 @@ public class Player
 
     private String name = "Noname";
     String place = "Nowhere";
+
+    Statistics statistics;
 }

@@ -33,6 +33,7 @@ public class Level
             String currentDirectory = System.getProperty("user.dir");
             String relativePath = "src\\com\\KillTheAlreek\\utils\\playerData.json";
             String jsonFilePath = currentDirectory + "\\" + relativePath;
+
             FileReader fileReader = new FileReader(jsonFilePath);
             JSONTokener jsonTokener = new JSONTokener(fileReader);
             JSONObject jsonObject = new JSONObject(jsonTokener);
@@ -51,7 +52,8 @@ public class Level
                 }
             }
             fileReader.close();
-        } catch (Exception e)
+        }
+        catch (Exception e)
         {
             e.printStackTrace();
         }
