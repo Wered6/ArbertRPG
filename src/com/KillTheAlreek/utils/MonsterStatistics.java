@@ -39,9 +39,10 @@ public class MonsterStatistics
                 if (id == this.id)
                 {
                     this.name = name;
+                    this.power = power;
                     this.healthPoints = new HealthPoints((short) healthPoints);
-                    this.basePower = new Power((byte) power);
                     this.description = description;
+
                 }
             }
         }
@@ -59,12 +60,12 @@ public class MonsterStatistics
         GameLogic.printStringLBL("Statystyki potwora:");
         GameLogic.printStringLBL("Nazwa potwora: " + name);
         GameLogic.printStringLBL("Health Points: " + healthPoints.getCurrent() + "/" + healthPoints.getMax());
-        GameLogic.printStringLBL("Power: " + basePower.getPower());
+        GameLogic.printStringLBL("Power: " + power);
     }
 
     private int id;
     private String name;
     private HealthPoints healthPoints;
-    private Power basePower;
+    private int power;
     private String description;
 }

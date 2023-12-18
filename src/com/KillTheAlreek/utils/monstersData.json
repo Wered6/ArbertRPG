@@ -10,34 +10,30 @@
         {
             "id": 2,
             "name": "Duo'Thargan",
-            "expGet": 200,
             "power": 2,
             "healthPoints": 200,
-            "description": "My, Duo'Thargan, jesteśmy bliźniakami - demonami, stworzonymi z duchów wojowników.\nNasza więź... jest naszą siłą. Atakujemy i bronimy się z precyzją, której nie można zrozumieć.\nCzy zechcesz stawić czoła naszej dwustronnej furii?"
+            "description": "My, Duo'Thargan, jesteśmy bliźniakami - demonami, stworzonymi z duchów wojowników. Pewnie przyszedles po klucz którego bronimy?\nNasza więź... jest naszą siłą. Atakujemy i bronimy się z precyzją, której nie można zrozumieć.\nCzy zechcesz stawić czoła naszej dwustronnej furii?"
         },
         {
             "id": 3,
             "name": "Tres'Malifex",
-            "expGet": 300,
             "power": 3,
             "healthPoints": 300,
-            "description": "Ja, Tres'Malifex, kiedyś czarodziej... teraz istota o trzech twarzach.\nZdradziłem, by zdobyć moc. Moc, która pozwala mi przywoływać mroczne byty... Manipuluję rzeczywistością według mojej woli.\nCzy podejmiesz wyzwanie i staniesz przeciwko moim zaklęciom?"
+            "description": "Ja, Tres'Malifex, kiedyś czarodziej... teraz istota o trzech twarzach. Nie oddam Ci mojego skarbu!\nZdradziłem, by zdobyć moc. Moc, która pozwala mi przywoływać mroczne byty... Manipuluję rzeczywistością według mojej woli.\nCzy podejmiesz wyzwanie i staniesz przeciwko moim zaklęciom?"
         },
         {
             "id": 4,
             "name": "Quattro'Daktyl",
-            "expGet": 400,
             "power": 4,
             "healthPoints": 400,
-            "description": "Jestem Quattro'Daktyl, potwór z przeszłości, ożywiony przez magię...\nMoje cztery skrzydła i śmiertelne pazury są moją bronią. Krążę po zapomnianych ziemiach, polując na śmiałków...\nKto odważy się wkroczyć na moje terytorium, będzie musiał zmierzyć się ze mną w powietrzu."
+            "description": "Jestem Quattro'Daktyl, potwór z przeszłości, ożywiony przez magię... Pewnie chciałeś zabrać coś z mojego gniazda?!\nMoje cztery skrzydła i śmiertelne pazury są moją bronią. Krążę po zapomnianych ziemiach, polując na śmiałków...\nKto odważy się wkroczyć na moje terytorium, będzie musiał zmierzyć się ze mną w powietrzu."
         },
         {
             "id": 5,
             "name": "Quinque'Ravox",
-            "expGet": 500,
             "power": 5,
             "healthPoints": 500,
-            "description": "Jestem Quinque'Ravox, duchem morskim... przemierzam głębiny, poszukując zatopionych skarbów.\nMoje macki są pułapką dla nierozważnych... Strzegę starożytnego miasta, ukrytego na dnie oceanu.\nCzy masz odwagę zagłębić się w moje królestwo i zmierzyć się ze mną w głębinach?"
+            "description": "Jestem Quinque'Ravox, duchem morskim... przemierzam głębiny, poszukując zatopionych skarbów. Wiem po co przyszedłeś!\nMoje macki są pułapką dla nierozważnych... Strzegę starożytnego miasta, ukrytego na dnie oceanu.\nCzy masz odwagę zagłębić się w moje królestwo i zmierzyć się ze mną w głębinach?"
         }
     ]
 }

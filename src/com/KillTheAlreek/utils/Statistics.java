@@ -10,11 +10,8 @@ public class Statistics
 {
     public Statistics()
     {
-        level = new Level();
-        itemPower = new Power((byte) 0);
-        finalPower = new Power((byte) 0);
+        level = 1;
         updateFromJson();
-        finalPower.sumOfPowers(basePower, itemPower);
     }
 
     public void updateFromJson()
@@ -37,13 +34,21 @@ public class Statistics
                 int power = statisticsData.getInt("power");
                 int healthPoints = statisticsData.getInt("healthPoints");
                 int mana = statisticsData.getInt("mana");
+                String itemName = statisticsData.getString("itemName");
+                String itemDescription = statisticsData.getString("itemDescription");
+                String specialAttackDescription = statisticsData.getString("specialAttackDescription");
+                String specialAttackName = statisticsData.getString("specialAttackName");
 
-                if (level == this.level.getCurrentLevel())
+                if (this.level == level)
                 {
-
+                    this.power = power;
                     this.healthPoints = new HealthPoints((short) healthPoints);
-                    this.basePower = new Power((byte) power);
                     this.mana = new Mana((short) mana);
+                    this.itemName = itemName;
+                    this.itemDescription = itemDescription;
+                    this.specialAttackDescription = specialAttackDescription;
+                    this.specialAttackName = specialAttackName;
+
                 }
             }
         }
@@ -57,18 +62,28 @@ public class Statistics
     {
         GameLogic.printStringLBL("");
         GameLogic.printStringLBL("Statystyki:");
-        GameLogic.printStringLBL("Level: " + level.getCurrentLevel());
+        GameLogic.printStringLBL("Level: " + level);
+        GameLogic.printStringLBL("Power: " + power);
         GameLogic.printStringLBL("Health Points: " + healthPoints.getCurrent() + "/" + healthPoints.getMax());
         GameLogic.printStringLBL("Mana: " + mana.getCurrent() + "/" + mana.getMax());
-        GameLogic.printStringLBL("Power (base+item): " + finalPower.getPower() + " (" + basePower.getPower() + "+" + itemPower.getPower() + ")");
+        GameLogic.printStringLBL("Item Name: " + itemName);
+        GameLogic.printStringLBL("Item Description: " + itemDescription);
+        GameLogic.printStringLBL("Special Attack: " + specialAttackDescription);
+        GameLogic.printStringLBL("Special Attack Power: " + specialAttackDamage);
+    }
+    public void levelUp()
+    {
+        level++;
+        updateFromJson();
     }
 
-    private Level level;
-
+    private int level;
     private HealthPoints healthPoints;
     private Mana mana;
-
-    private Power basePower;
-    private Power itemPower;
-    private Power finalPower;
+    private int power;
+    private String itemName;
+    private String itemDescription;
+    private String specialAttackDescription;
+    private String specialAttackName;
+    private int specialAttackDamage;
 }

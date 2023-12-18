@@ -13,6 +13,8 @@ public class Main
 
         System.out.println(player.getFullName());
         player.info();
+        player.levelUp();
+        player.info();
         GameLogic.anythingToContinue();
     }
 }

@@ -2,38 +2,58 @@
     "statistics": [
         {
             "level": 1,
-            "nextLevelExperience": 100,
-            "power": 1,
+            "power": 10,
             "healthPoints": 100,
-            "mana": 50
+            "mana": 50,
+            "itemName": "Lśniący Odblask",
+            "itemDescription": "Lustrzana tarcza, która odbija światło i zaklęcia.",
+            "specialAttackDescription": "Przeciwodbicie - odbija zaklęcia i spojrzenie Unus'Gorgona, tymczasowo paraliżując go i czyniąc go podatnym na ataki.",
+            "specialAttackName": "Przeciwodbicie",
+            "specialAttackDamage": 30
         },
         {
             "level": 2,
-            "nextLevelExperience": 200,
-            "power": 3,
+            "power": 25,
             "healthPoints": 200,
-            "mana": 100
+            "mana": 100,
+            "itemName": "Echo Dwóch Ostrzy",
+            "itemDescription": "Para mieczy, które rezonują ze sobą, wzmacniając swoje uderzenia.",
+            "specialAttackDescription": "Harmonijna Cięcie - wyzwala podwójną falę energii, która przełamuje koordynowany atak bliźniaków, rozdzielając ich więź na chwilę.",
+            "specialAttackName": "Harmonijna Cięcie",
+            "specialAttackDamage": 75
         },
         {
             "level": 3,
-            "nextLevelExperience": 300,
-            "power": 5,
+            "power": 35,
             "healthPoints": 300,
-            "mana": 150
+            "mana": 150,
+            "itemName": "Kryształ Czystości",
+            "itemDescription": "Różdżka wypełniona czystą energią, zdolna rozpraszać mroczną magię. \nŚwietlisty Wybuch - uwalnia falę czystej energii, która neutralizuje zaklęcia Tres'Malifexa i osłabia jego obronę.",
+            "specialAttackDescription": "Świetlisty Wybuch - uwalnia falę czystej energii, która neutralizuje zaklęcia Tres'Malifexa i osłabia jego obronę.",
+            "specialAttackName": "Świetlisty Wybuch",
+            "specialAttackDamage": 105
         },
         {
             "level": 4,
-            "nextLevelExperience": 400,
-            "power": 7,
+            "power": 50,
             "healthPoints": 400,
-            "mana": 200
+            "mana": 200,
+            "itemName": "Gromowładny Łuk",
+            "itemDescription": "Łuk, który wystrzeliwuje strzały nasączone energią piorunów.",
+            "specialAttackDescription": "Burzowe Uderzenie - wystrzeliwuje strzałę generującą burzę,która dezorientuje Quattro'Daktyla i osłabia jego zdolność do lotu.",
+            "specialAttackName": "Burzowe Uderzenie",
+            "specialAttackDamage": 150
         },
         {
             "level": 5,
-            "nextLevelExperience": 500,
-            "power": 9,
+            "power": 65,
             "healthPoints": 500,
-            "mana": 250
+            "mana": 250,
+            "itemName": "Morski Szept",
+            "itemDescription": "Harpun, którego ostrze jest pokryte starożytnymi runami, pozwalającymi na walkę pod wodą.",
+            "specialAttackDescription": "Wir Mocy - wystrzeliwuje wir energii, który unieruchamia macki Quinque'Ravoxa, umożliwiając bezpieczne zbliżenie.",
+            "specialAttackName": "Wir Mocy",
+            "specialAttackDamage": 195
         }
     ]
 }

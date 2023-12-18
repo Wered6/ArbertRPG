@@ -43,9 +43,13 @@ public class Player
     {
         return place;
     }
+    public void levelUp()
+    {
+        statistics.levelUp();
+    }
+
 
     private String name = "Noname";
-    String place = "Nowhere";
-
-    Statistics statistics;
+    private String place = "Nowhere";
+    private Statistics statistics;
 }
