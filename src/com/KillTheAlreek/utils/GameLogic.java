@@ -61,14 +61,15 @@ abstract public class GameLogic
         scanner.next();
     }
 
-    public static void printStringLBL(String str, long time)
+    // method to print anything letter by letter with custom sleep time
+    public static void printStringLBL(String str, long sleepTime)
     {
         for (int i = 0; i < str.length(); i++)
         {
             System.out.print(str.charAt(i));
             try
             {
-                Thread.sleep(time);
+                Thread.sleep(sleepTime);
             }
             catch (InterruptedException e)
             {
@@ -78,6 +79,7 @@ abstract public class GameLogic
         System.out.println();
     }
 
+    // method to print anything letter by letter
     public static void printStringLBL(String str)
     {
         for (int i = 0; i < str.length(); i++)
@@ -93,6 +95,26 @@ abstract public class GameLogic
             }
         }
         System.out.println();
+    }
+
+    public static boolean getTrueOrFalse()
+    {
+        while (true)
+        {
+            String input = scanner.nextLine();
+            if ("T".equalsIgnoreCase(input))
+            {
+                return true;
+            }
+            else if ("N".equalsIgnoreCase(input))
+            {
+                return false;
+            }
+            else
+            {
+                printStringLBL("Wprowadź T/N");
+            }
+        }
     }
 
     static Scanner scanner = new Scanner(System.in);

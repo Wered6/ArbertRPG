@@ -54,7 +54,7 @@ public class MonsterStatistics
     public void printInfo()
     {
         GameLogic.printStringLBL("");
-        GameLogic.printStringLBL(description, 1);
+        GameLogic.printStringLBL(description);
         GameLogic.printStringLBL("");
         GameLogic.printStringLBL("Statystyki potwora:");
         GameLogic.printStringLBL("Nazwa potwora: " + name);
