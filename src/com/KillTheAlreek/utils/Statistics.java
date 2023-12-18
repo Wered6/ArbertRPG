@@ -38,6 +38,7 @@ public class Statistics
                 String itemDescription = statisticsData.getString("itemDescription");
                 String specialAttackDescription = statisticsData.getString("specialAttackDescription");
                 String specialAttackName = statisticsData.getString("specialAttackName");
+                int specialAttackDamage = statisticsData.getInt("specialAttackDamage");
 
                 if (this.level == level)
                 {
@@ -47,6 +48,7 @@ public class Statistics
                     this.itemName = itemName;
                     this.itemDescription = itemDescription;
                     this.specialAttackDescription = specialAttackDescription;
+                    this.specialAttackDamage = specialAttackDamage;
                     this.specialAttackName = specialAttackName;
 
                 }
