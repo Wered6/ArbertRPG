@@ -6,4 +6,6 @@ public class HealthPoints extends Value
     {
         super(maxHealthPoints);
     }
+
+
 }

@@ -1,6 +1,8 @@
 package com.KillTheAlreek.characters;
 
+import com.KillTheAlreek.utils.MonsterStatistics;
 import com.KillTheAlreek.utils.Statistics;
+
 
 public class Player
 {
@@ -27,6 +29,15 @@ public class Player
     public void setName(String name)
     {
         this.name = name;
+    }
+
+    public Statistics getPlayerStatistics() {
+        ;
+    }
+
+    public int attack(Monster monster){
+
+        return 0;
     }
 
     public void setPlace(String place)

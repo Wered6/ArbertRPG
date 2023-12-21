@@ -63,6 +63,8 @@ public class MonsterStatistics
         GameLogic.printStringLBL("Power: " + power);
     }
 
+
+
     private int id;
     private String name;
     private HealthPoints healthPoints;

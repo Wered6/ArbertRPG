@@ -14,5 +14,11 @@ public class Monster
         monsterStatistics.printInfo();
     }
 
+    public MonsterStatistics getMonsterStatistics() {
+        return monsterStatistics;
+    }
+
+
     MonsterStatistics monsterStatistics;
+
 }
