@@ -6,13 +6,7 @@ import com.KillTheAlreek.characters.Monster;
 import java.util.Random;
 
 public class Combat {
-    private Player player;
-    private Monster monster;
 
-    public Combat(Player player, Monster monster) {
-        this.player = player;
-        this.monster = monster;
-    }
 
     public void startCombat() {
         GameLogic.printHeading("Rozpoczęła się walka!");
@@ -44,7 +38,7 @@ public class Combat {
             GameLogic.printHeading("Ruch potwora:");
             monster.info();
             // Tutaj możesz dodać logikę dla ruchu potwora, np. atak gracza.
-            // Przykładowo: monster.attack(player);
+            monster.attack(player);
             int damageTaken = calculateDamage(monster.getMonsterStatistics().getPower());
             player.getStatistics().getHealthPoints().decreaseCurrent((short) damageTaken);
             GameLogic.printStringLBL("Potwór zadał Ci " + damageTaken + " obrażeń!");
@@ -89,4 +83,9 @@ public class Combat {
         int baseDamage = rand.nextInt(10) + 1;  // Losowa liczba od 1 do 10.
         return baseDamage + attackerPower;
     }
+
+
+    private Player player;
+    private Monster monster;
+
 }

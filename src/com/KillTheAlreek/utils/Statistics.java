@@ -79,6 +79,17 @@ public class Statistics
         updateFromJson();
     }
 
+    public int getPower()
+    {
+        return power;
+    }
+    public HealthPoints getHealthPoints()
+    {
+        return healthPoints;
+    }
+
+
+
     private int level;
     private HealthPoints healthPoints;
     private Mana mana;

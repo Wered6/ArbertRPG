@@ -31,19 +31,21 @@ public class Player
         this.name = name;
     }
 
-    public Statistics getPlayerStatistics() {
-        ;
-    }
 
     public int attack(Monster monster){
-
+        //logika
         return 0;
+    }
+
+    public Statistics getStatistics() {
+        return statistics;
     }
 
     public void setPlace(String place)
     {
         this.place = place;
     }
+
 
     public String getName()
     {

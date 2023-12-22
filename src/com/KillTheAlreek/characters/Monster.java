@@ -18,6 +18,10 @@ public class Monster
         return monsterStatistics;
     }
 
+    public int attack(Player player){
+        //logika
+        return 0;
+    }
 
     MonsterStatistics monsterStatistics;
 
