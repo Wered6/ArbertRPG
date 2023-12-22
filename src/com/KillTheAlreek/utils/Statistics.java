@@ -88,6 +88,10 @@ public class Statistics
         return healthPoints;
     }
 
+    public String getSpecialAttackName(){
+        return specialAttackName;
+    }
+
 
 
     private int level;

@@ -11,6 +11,14 @@ public class Player
         statistics = new Statistics();
     }
 
+    public void chooseAttack()
+    {
+        System.out.println("1.Atak podstawowy");
+        System.out.println("2.Atak specjalny " + statistics.getSpecialAttackName());
+        System.out.println("3.Defensywa podstawowa");
+        System.out.println("4.Defensywa magiczna");
+    }
+
     public void info()
     {
         statistics.printInfo();

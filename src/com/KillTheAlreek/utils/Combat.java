@@ -27,6 +27,7 @@ public class Combat {
     private void playerTurn() {
         GameLogic.printHeading("Twój ruch:");
         player.info();
+        player.chooseAttack();
         player.attack(monster);
         int damageDealt = calculateDamage(player.getStatistics().getPower());
         monster.getMonsterStatistics().getHealthPoints().decreaseCurrent((short) damageDealt);
@@ -50,8 +51,7 @@ public class Combat {
         if (monsterIsAlive()) {
             GameLogic.printHeading("Ruch potwora:");
             monster.info();
-            // Tutaj możesz dodać logikę dla ruchu potwora, np. atak gracza.
-            // Przykładowo: monster.attack(player);
+            monster.attack(player);
             int damageTaken = calculateDamage(monster.getMonsterStatistics().getPower());
             player.getStatistics().getHealthPoints().decreaseCurrent((short) damageTaken);
             GameLogic.printStringLBL("Potwór zadał Ci " + damageTaken + " obrażeń!");
